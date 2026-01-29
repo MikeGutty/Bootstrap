@@ -1,0 +1,65 @@
+/* Reset suave */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+}
+
+/* 🔥 Grid principal */
+.layout {
+  display: grid;
+
+  /* 2 columnas: sidebar + contenido */
+  grid-template-columns: 250px 1fr;
+
+  /* 3 filas */
+  grid-template-rows: auto 1fr auto;
+
+  /* Nombres de áreas (muy didáctico) */
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+
+  gap: 16px;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+/* Asignar áreas */
+.header  { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.content { grid-area: content; }
+.footer  { grid-area: footer; }
+
+/* Estilos visuales */
+.header {
+  background: #4f46e5;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.sidebar {
+  background: #e5e7eb;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.footer {
+  background: #111827;
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+}
